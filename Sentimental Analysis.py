@@ -6,6 +6,16 @@ import os
 import warnings
 warnings.filterwarnings("ignore")
 
+# ✅ Set custom tab name and icon
+st.set_page_config(
+    page_title="Social Media Sentiment Analyzer",  # Browser tab title
+    page_icon="💬",                                # Tab icon (emoji or image URL)
+    layout="centered"
+)
+
+st.title("💬 Social Media Sentiment Analyzer")
+st.info("Paste text or upload a CSV file to analyze sentiment.")
+
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 GEMINI_API_KEY = st.sidebar.text_input("AIzaSyDjC1F4bss3DEOxkIRhX3hRU-u5dwjx3yI", type="password", value=api_key)
